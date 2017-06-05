@@ -14,8 +14,7 @@
                         :asset-path "/js/out"
                         :source-paths ["src/cljs"]
                         :compiler {:output-to "resources/public/js/compiled/app.js"
-                                   :source-map true
-                                   :optimizations :none
+                                   :optimizations :simple
                                    :closure-defines {goog.DEBUG true}
                                    :pretty-print true}}
                        {:id "prod"
