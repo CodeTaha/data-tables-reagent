@@ -16,6 +16,14 @@
                         :compiler {:output-to "resources/public/js/compiled/app.js"
                                    :optimizations :simple
                                    :closure-defines {goog.DEBUG true}
+                                   :foreign-libs [{:file "resources/vendor/bootstrap.min.js"
+                                                   :provides ["fl.bootstrap"]}
+                                                  {:file "resources/vendor/jquery.dataTables.min.js"
+                                                   :provides ["fl.data-tables"]
+                                                   :requires ["fl.bootstrap"]}
+                                                  {:file "resources/vendor/dataTables.bootstrap.js"
+                                                   :provides ["fl.data-tables-bootstrap"]
+                                                   :requires ["fl.data-tables"]}]
                                    :pretty-print true}}
                        {:id "prod"
                         :main data_tables_reagent.core
