@@ -1,8 +1,10 @@
 (ns data-tables-reagent.core
-    (:require [reagent.core :as reagent]
-              [fl.bootstrap :as bootstrap]
-              [fl.data-tables :as data-tables]
-              [fl.data-tables-bootstrap :as data-tables-bootstrap]))
+  ;(:use [jayq.core :only [$ css html]])
+  (:require [reagent.core :as reagent]
+            ;[fl.bootstrap :as bootstrap]
+            [fl.data-tables :as data-tables]
+            ;[fl.data-tables-bootstrap :as data-tables-bootstrap]
+            ))
 
 (def dataset [[ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ]
               [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750" ]

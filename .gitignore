@@ -1,2 +1,3 @@
 .nrepl-port
 .idea/**/**
+resources/public/js/compiled/**/**
