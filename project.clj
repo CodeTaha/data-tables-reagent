@@ -2,7 +2,6 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.122"];1.9.562 1.7.122
                  [reagent "0.5.1"]
-                 [jayq "2.5.4"]
                  ;[cljsjs/jquery "2.2.4-0"]
                  ]
 
@@ -21,15 +20,15 @@
                                    :closure-defines {goog.DEBUG true}
                                    :foreign-libs [{:file "resources/vendor/jquery.min.js"
                                                    :provides ["fl.jquery"]}
-                                                  ;{:file "resources/vendor/bootstrap.min.js"
-                                                   ;:provides ["fl.bootstrap"]}
+                                                  {:file "resources/vendor/bootstrap.min.js"
+                                                   :provides ["fl.bootstrap"]
+                                                   :requires ["fl.jquery"]}
                                                   {:file "resources/vendor/jquery.dataTables.min.js"
                                                    :provides ["fl.data-tables"]
-                                                   :requires ["fl.jquery"]
-                                                   }
-                                                  ;{:file "resources/vendor/dataTables.bootstrap.js"
-                                                  ; :provides ["fl.data-tables-bootstrap"]
-                                                  ; :requires ["fl.data-tables"]}
+                                                   :requires ["fl.jquery"]}
+                                                  {:file "resources/vendor/dataTables.bootstrap.js"
+                                                   :provides ["fl.data-tables-bootstrap"]
+                                                   :requires ["fl.data-tables"]}
                                                   ]
                                    :pretty-print true}}
                        {:id "prod"
